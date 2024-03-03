@@ -688,7 +688,7 @@
   }
 
   #home .container .home-content h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   #home .container .home-content p {
@@ -725,12 +725,14 @@
 
   #about .container h2,
   #produk .container .title h2,
-  #testimoni .container .title h2 {
+  #testimoni .container .title h2,
+  #kontak .container .title h2 {
     font-size: 1.2rem;
   }
 
   #about .container .box-about hr,
-  #produk .container .title hr {
+  #produk .container .title hr,
+  #kontak .container .title hr {
     width: 120px;
     margin: 5px auto;
   }
