@@ -1,5 +1,12 @@
-// Sembunyikan dan Munculkan Item produk
+// Button Humberger
+const btnBurger = document.getElementById("burger");
+const navlink = document.getElementById("menu-list");
 
+btnBurger.addEventListener("click", () => {
+  navlink.classList.toggle("active");
+});
+
+// Sembunyikan dan Munculkan Item produk
 const show = document.getElementById("show");
 const item = document.getElementById("hide");
 const arrow = document.getElementById("arrow");
