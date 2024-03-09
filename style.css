@@ -469,7 +469,6 @@
   flex-wrap: wrap;
   flex-direction: row-reverse;
   width: max-content;
-  gap: 30px;
 }
 
 #kontak .container .kontak-container .kontak-box {
@@ -823,7 +822,7 @@
 
   /* Testimoni */
   #kontak .container .kontak-container .map {
-    width: 300px;
+    width: 260px;
   }
 
   /* Kontak */
