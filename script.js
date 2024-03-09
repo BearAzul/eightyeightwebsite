@@ -6,23 +6,22 @@ btnBurger.addEventListener("click", () => {
   navlink.classList.toggle("active");
 });
 
-// Sembunyikan dan Munculkan Item produk
+// Sembunyikan dan Munculkan Card produk lebih banyak
 const show = document.getElementById("show");
 const item = document.getElementById("hide");
 const arrow = document.getElementById("arrow");
 const text = document.getElementById("text");
 
 show.addEventListener("click", () => {
-  if (item.style.display == "block") {
-    item.style.display = "none";
-    text.innerHTML = "Tampilkan Lebih Banyak...";
-    arrow.classList.remove("fa-caret-up");
-    arrow.classList.add("fa-sort-down");
-  } else {
-    item.style.display = "block";
+  item.classList.toggle("active");
+  if (item.classList.contains("active")) {
     text.innerHTML = "Tampilkan Lebih Sedikit...";
-    arrow.classList.remove("fa-sort-down");
-    arrow.classList.add("fa-caret-up");
+    arrow.classList.remove("fa-caret-down");
+    arrow.classList.add("fa-sort-up");
+  } else {
+    text.innerHTML = "Tampilkan Lebih Banyak...";
+    arrow.classList.remove("fa-sort-up");
+    arrow.classList.add("fa-caret-down");
   }
 });
 
@@ -73,3 +72,29 @@ var swiperCard = new Swiper(".content", {
     disableOnInteraction: false,
   },
 });
+
+// Filter Card Produk
+function filterObjects(color, button) {
+  const cards = document.querySelectorAll(".card");
+  const buttons = document.querySelectorAll(".btn");
+
+  buttons.forEach((btn) => {
+    btn.classList.remove("active");
+    item.classList.add("active");
+    arrow.classList.add("fa-sort-up");
+    arrow.classList.remove("fa-caret-down");
+    text.innerHTML = "Tampilkan Lebih Sedikit...";
+  });
+
+  button.classList.add("active");
+
+  cards.forEach((card) => {
+    const cardColor = card.querySelector("h4").textContent.toLowerCase();
+
+    if (color === "all" || cardColor.includes(color.toLowerCase())) {
+      card.style.display = "grid";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
