@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
   <link rel="stylesheet" href="style.css">
   <title>Website Eighty Eight</title>
 </head>
@@ -46,10 +45,24 @@
           Definisi baru dari elegansi kemeja.</p>
         <a href="#produk" class="button-shop">Belanja Sekarang<i class="fa-solid fa-truck-ramp-box"></i></a>
       </div>
-      <div class="image-content" data-aos="fade-up" data-aos-duration="1000">
-        <div class="images">
-          <img src="https://down-id.img.susercontent.com/file/b3daa2bcdb20de3f3930a2d8530d9274" alt="" width="100%"
-            height="100%">
+      <div class="swiper content" data-aos="fade-up" data-aos-duration="1000">
+        <div class="swiper-wrapper image-content">
+          <div class="swiper-slide images">
+            <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rbl7-lncmkyiy8e7lff" alt="" width="100%"
+              height="100%">
+          </div>
+          <div class="swiper-slide images">
+            <img src="https://down-id.img.susercontent.com/file/sg-11134201-7qvfk-ljryv96irfxn14" alt="" width="100%"
+              height="100%">
+          </div>
+          <div class="swiper-slide images">
+            <img src="https://img.ws.mms.shopee.co.id/sg-11134201-7rbm8-lme67mysg5ehce" alt="" width="100%"
+              height="100%">
+          </div>
+          <div class="swiper-slide images">
+            <img src="https://img.ws.mms.shopee.co.id/sg-11134201-7qvff-liwgqwafnenrd8" alt="" width="100%"
+              height="100%">
+          </div>
         </div>
       </div>
     </div>
@@ -329,8 +342,17 @@
                 required>
               <input type="text" name="email" id="email" placeholder="Masukkan Email Anda" autocomplete="off" required>
               <textarea name="message" id="pesan" cols="30" rows="6" placeholder="Pesan Anda"></textarea>
-              <button type="submit">Kirim Saran</button>
+              <button type="submit">Kirim Saran</b utton>
             </form>
+          </div>
+        </div>
+        <div class="kontak-box">
+          <div class="map">
+            <h4>Lokasi Kami:</h4>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126904.29865084794!2d106.62590967326817!3d-6.295325954105953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fab10419c095%3A0x8706481c2c4aafe4!2sSouth%20Tangerang%2C%20South%20Tangerang%20City%2C%20Banten!5e0!3m2!1sen!2sid!4v1709686463404!5m2!1sen!2sid"
+              width="100%" height="300" style="margin-top: 8px; border: 0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -347,14 +369,21 @@
       </div>
       <div class="box b">
         <p>Toko Kami:</p>
-        <a href="https://www.tokopedia.com/brilleightyeight" target="_blank">
-          <img src="https://i1.wp.com/loosewood.com/wp-content/uploads/2019/01/logo-tokopedia.png?fit=940%2C282&ssl=1"
-            alt="tokopedia">
-        </a>
-        <a href="https://shopee.co.id/brilleightyeightofficial" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Shopee.svg/2560px-Shopee.svg.png"
-            alt="shopee">
-        </a>
+        <span class="toko">
+          <a href="https://www.tokopedia.com/brilleightyeight" target="_blank">
+            <img src="https://i1.wp.com/loosewood.com/wp-content/uploads/2019/01/logo-tokopedia.png?fit=940%2C282&ssl=1"
+              alt="tokopedia">
+          </a>
+          <a href="https://shopee.co.id/brilleightyeightofficial" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Shopee.svg/2560px-Shopee.svg.png"
+              alt="shopee">
+          </a>
+          <a href="https://www.lazada.co.id/shop/brilleightyeight" target="_blank">
+            <img
+              src="https://www.omahwangi.com/wp-content/uploads/2021/11/Logo-Lazada-Baru-2019-PNG-1080p-FileVector69.png"
+              alt="lazada">
+          </a>
+        </span>
       </div>
       <div class="box c">
         <p>Download App:</p>
@@ -391,33 +420,11 @@
       <i class="fa-solid fa-chevron-up"></i>
     </div>
   </a>
+
   <!-- Script Aksara Jawa -->
-  <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-
-    AOS.init({
-      once: true,
-    });
-
-    const swiper = new Swiper('.js-testimoni-slider', {
-      grabCursor: true,
-      spaceBetween: 30,
-      pagination: {
-        el: '.js-testimoni-page',
-        clickable: true,
-      },
-      breakpoints: {
-        762: {
-          slidesPerView: 2
-        }
-
-      }
-    });
-  </script>
-
+  <script src="script.js"></script>
 
 </body>
 

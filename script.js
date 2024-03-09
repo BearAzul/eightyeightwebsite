@@ -36,3 +36,40 @@ document.addEventListener("scroll", () => {
     scrollBtn.style.display = "block";
   }
 });
+
+// Animastion Page
+AOS.init(); // AOS Library
+
+AOS.init({
+  once: true,
+});
+
+// Swiper Library, animation slide
+const swiperSlide = new Swiper(".js-testimoni-slider", {
+  grabCursor: false,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".js-testimoni-page",
+    clickable: true,
+  },
+  breakpoints: {
+    762: {
+      slidesPerView: 2,
+    },
+  },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+});
+
+// Swiper Library, animation card
+var swiperCard = new Swiper(".content", {
+  effect: "cards",
+  grabCursor: false,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+});
