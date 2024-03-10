@@ -14,17 +14,6 @@ btnBurger.addEventListener("click", () => {
   closeIcon.classList.toggle("hidden");
 });
 
-// Event Window Scroll, hilangkan Menu-List dan Ubah menjadi icon Burger
-window.addEventListener("scroll", () => {
-  // Hilangkan menu-list and munculkan icon burger, Jika menu-list aktif
-  if (navlink.classList.contains("active")) {
-    navlink.classList.remove("active");
-
-    burgerIcon.classList.remove("hidden");
-    closeIcon.classList.add("hidden");
-  }
-});
-
 // Event Window Click, hilangkan Menu-List dan Ubah menjadi icon Burger
 window.addEventListener("click", (e) => {
   if (e.target != burgerIcon) {
