@@ -110,10 +110,15 @@
   z-index: 1;
   display: none;
   background: none;
+  width: 30px;
   border: none;
   font-size: 1.5rem;
   color: #111;
   cursor: pointer;
+}
+
+.navbar .burger .hidden {
+  display: none;
 }
 
 
@@ -483,7 +488,6 @@
   text-align: center;
   color: #111;
   margin: 0 auto;
-
 }
 
 #kontak .container .title hr {
@@ -670,6 +674,7 @@
     background: #eee;
     padding: 15px 20px;
     z-index: 2;
+    border-left: 2px solid #222;
   }
 
   .navbar .navbar-group .navigation a::before {
@@ -686,7 +691,7 @@
 
   /* Animation Menu List Navbar Start */
   .navigation a {
-    animation: animationUhuy 600ms ease forwards;
+    animation: animationUhuy 400ms ease forwards;
     transform: rotateY(90deg) rotateX(90deg);
     transform-origin: top right;
     opacity: 0;
@@ -697,15 +702,15 @@
   }
 
   .navigation a:nth-child(3) {
-    animation-delay: 600ms;
+    animation-delay: 500ms;
   }
 
   .navigation a:nth-child(4) {
-    animation-delay: 900ms;
+    animation-delay: 700ms;
   }
 
   .navigation a:nth-child(5) {
-    animation-delay: 1.2s;
+    animation-delay: 900ms;
   }
 
   @keyframes animationUhuy {

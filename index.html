@@ -28,7 +28,8 @@
       </nav>
       <a href="#footer" class="download-app">Download App</a>
       <button type="button" class="burger" id="burger">
-        <i class="fa-solid fa-bars menu"></i>
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-xmark hidden"></i>
       </button>
     </div>
   </header>
@@ -132,11 +133,11 @@
             dan kesempurnaan tradisional.</p>
         </div>
         <div class="produk-filter">
-          <button class="btn active" onclick="filterObjects('all', this)">All</button>
-          <button class="btn" onclick="filterObjects('black', this)">Black</button>
-          <button class="btn" onclick="filterObjects('white', this)">White</button>
-          <button class="btn" onclick="filterObjects('gray', this)">Gray</button>
-          <button class="btn" onclick="filterObjects('mocca', this)">Mocca</button>
+          <button class="btn-filter active" onclick="filterObjects('all', this)">All</button>
+          <button class="btn-filter" onclick="filterObjects('black', this)">Black</button>
+          <button class="btn-filter" onclick="filterObjects('white', this)">White</button>
+          <button class="btn-filter" onclick="filterObjects('gray', this)">Gray</button>
+          <button class="btn-filter" onclick="filterObjects('mocca', this)">Mocca</button>
         </div>
         <div class="produk-content">
           <div class="card">
@@ -403,7 +404,7 @@
               <input type="text" name="name" id="nama" placeholder="Masukkan Nama Lengkap Anda" autocomplete="off"
                 required>
               <input type="text" name="email" id="email" placeholder="Masukkan Email Anda" autocomplete="off" required>
-              <textarea name="message" id="pesan" cols="30" rows="6" placeholder="Pesan Anda"></textarea>
+              <textarea name="message" id="pesan" cols="30" rows="6" placeholder="Pesan Anda" required></textarea>
               <button type="submit">Kirim Pesan</button>
             </form>
           </div>
@@ -484,7 +485,6 @@
   </a>
 
   <!-- Script Aksara Jawa -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>

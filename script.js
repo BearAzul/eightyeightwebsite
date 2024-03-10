@@ -1,9 +1,40 @@
-// Button Humberger
+// Deklarasi untuk Button Hamburger dan Menu-List
 const btnBurger = document.getElementById("burger");
 const navlink = document.getElementById("menu-list");
 
+// Deklarasi untuk Icon Humburger dan X 
+const burgerIcon = btnBurger.querySelector(".fa-bars");
+const closeIcon = btnBurger.querySelector(".fa-xmark");
+
 btnBurger.addEventListener("click", () => {
   navlink.classList.toggle("active");
+
+  // Toggle the visibility of the burger and close icons
+  burgerIcon.classList.toggle("hidden");
+  closeIcon.classList.toggle("hidden");
+});
+
+// Event Window Scroll, hilangkan Menu-List dan Ubah menjadi icon Burger
+window.addEventListener("scroll", () => {
+  // Hilangkan menu-list and munculkan icon burger, Jika menu-list aktif
+  if (navlink.classList.contains("active")) {
+    navlink.classList.remove("active");
+
+    burgerIcon.classList.remove("hidden");
+    closeIcon.classList.add("hidden");
+  }
+});
+
+// Event Window Click, hilangkan Menu-List dan Ubah menjadi icon Burger
+window.addEventListener("click", (e) => {
+  if (e.target != burgerIcon) {
+    if (navlink.classList.contains("active")) {
+      navlink.classList.remove("active");
+
+      burgerIcon.classList.remove("hidden");
+      closeIcon.classList.add("hidden");
+    }
+  }
 });
 
 // Sembunyikan dan Munculkan Card produk lebih banyak
@@ -76,7 +107,7 @@ var swiperCard = new Swiper(".content", {
 // Filter Card Produk
 function filterObjects(color, button) {
   const cards = document.querySelectorAll(".card");
-  const buttons = document.querySelectorAll(".btn");
+  const buttons = document.querySelectorAll(".btn-filter");
 
   buttons.forEach((btn) => {
     btn.classList.remove("active");
